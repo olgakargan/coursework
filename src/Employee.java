@@ -1,6 +1,7 @@
 import java.util.Objects;
 
 public class Employee {
+    public int[] getSalary;
     private String Fam;
     private String Name;
     private String SName;
@@ -8,8 +9,6 @@ public class Employee {
     private float Salary;
     private static int Counter;
     private int Id;
-
-
     //  Getters
     public int getId() {
         return this.Id;
@@ -37,17 +36,7 @@ public class Employee {
 //Setters
 
 
-    public void setFam(String fam) {
-        this.Fam = fam;
-    }
 
-    public void setName(String name) {
-        this.Name = name;
-    }
-
-    public void setSName(String SName) {
-        this.SName = SName;
-    }
 
     public void setDepartment(int dept) {
         this.Department = dept;
@@ -79,15 +68,13 @@ public class Employee {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Employee)) return false;
-        Employee employee = (Employee) o;
-        return getDepartment() == employee.getDepartment() && Float.compare(employee.getSalary(), getSalary()) == 0 && getId() == employee.getId() && Objects.equals(getFam(), employee.getFam()) && Objects.equals(getName(), employee.getName()) && Objects.equals(getSName(), employee.getSName());
+    public boolean equals(Object obj) {
+        return super.equals(obj);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getFam(), getName(), getSName(), getDepartment(), getSalary(), getId());
+        int hash = Objects.hash(getFam(), getName(), getSName(), getDepartment(), getSalary(), getId());
+        return hash;
     }
 }
