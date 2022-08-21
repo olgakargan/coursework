@@ -1,69 +1,76 @@
 import java.util.Objects;
 
 public class Employee {
-    public int[] getSalary;
-    private String Fam;
-    private String Name;
-    private String SName;
-    private int Department;
-    private float Salary;
-    private static int Counter;
-    private int Id;
-    //  Getters
-    public int getId() {
-        return this.Id;
-    }
+
+
+    private String fam;
+    private String name;
+    private String sName;
+    private int department;
+    private float salary;
+    private static int counter;
+    private int id;
+
 
     public String getFam() {
-        return this.Fam;
+        return this.fam;
     }
 
     public String getName() {
-        return this.Name;
+        return this.name;
     }
 
     public String getSName() {
-        return this.SName;
+        return this.sName;
     }
 
     public int getDepartment() {
-        return this.Department;
+        return this.department;
     }
 
     public float getSalary() {
-        return this.Salary;
+        return this.salary;
     }
-//Setters
 
 
-
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public void setDepartment(int dept) {
-        this.Department = dept;
+        this.department = dept;
     }
 
     public void setSalary(float sal) {
-        this.Salary = sal;
+        this.salary = sal;
     }
+
     //Constructor
-    public Employee(String fam, String name, String Sname, int dept, float sal) {
-        Fam = fam;
-        Name = name;
-        SName = Sname;
-        Department = dept;
-        Salary = sal;
-        Id = ++Counter;
+    public Employee(String fam, String name, String sName, int dept, float sal) {
+        this.fam = fam;
+        this.name = name;
+        this.sName = sName;
+        this.department = dept;
+        this.salary = sal;
+        id = ++counter;
+    }
+
+    public static void printAllEmployee() {
+    }
+
+    public int getId() {
+        return id;
     }
 
     @Override
     public String toString() {
         return "Employee{" +
-                "Fam='" + Fam + '\'' +
-                ", Name='" + Name + '\'' +
-                ", SName='" + SName + '\'' +
-                ", Department=" + Department +
-                ", Salary=" + Salary +
-                ", Id=" + Id +
+                "Fam='" + fam + '\'' +
+                ", Name='" + name + '\'' +
+                ", SName='" + sName + '\'' +
+                ", Department=" + department +
+                ", Salary=" + salary +
+                ", Id=" + id +
                 '}';
     }
 
@@ -77,4 +84,6 @@ public class Employee {
         int hash = Objects.hash(getFam(), getName(), getSName(), getDepartment(), getSalary(), getId());
         return hash;
     }
+
+
 }
