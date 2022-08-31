@@ -1,18 +1,45 @@
-import java.util.Arrays;
+import Lesson21.*;
 
 public class Main {
-    static Employee[] employees = new Employee[10];
+    public static void main(String[] args) {
+        Gryffindor[] gryffindor = new Gryffindor[3];
+        gryffindor[0] = new Gryffindor("Harry Potter", "Slytherin", "11", "6", "8", "12", "6");
+        gryffindor[1] = new Gryffindor("Hermione Granger", "Slytherin", "13", "7", "9", "11", "5");
+        gryffindor[2] = new Gryffindor("Ron Weasley", "Slytherin", "14", "8", "10", "10", "4");
+        }
+    public static void printAllGryffindor() {
+        for (Gryffindor gryffindor : Gryffindor) {
+            System.out.println(gryffindor);
+        }
+    }
+    }
+    public static void main(String[] args) {
+            Slytherin[] slytherin = new Slytherin[3];
+            slytherin[0] = new Slytherin("Draco Malfoy", "Slytherin", "11", "6", "8", "12", "6");
+            slytherin[1] = new Slytherin("Graham Montague", "Slytherin", "13", "7", "9", "11", "5");
+            slytherin[2] = new Slytherin("Gregory Goyle", "Slytherin", "14", "8", "10", "10", "4");
+
+        public static void printAllSlytherin() {
+            Slytherin[] Slytherin = new Slytherin[0];
+            for (Slytherin slytherin : Slytherin) {
+                System.out.println(slytherin);
+            }
+    }
+
 
     public static void main(String[] args) {
-        employees[0] = new Employee(" Fam 1 ", "Name1", "SName1", 1, 134567f);
-        employees[1] = new Employee("Fam 2", "Name2", "SName2", 1, 148000f);
-        employees[2] = new Employee("Fam 3", "Name3", "SName3", 2, 190800f);
-        employees[3] = new Employee("Fam 4", "Name4", "SName4", 2, 203000f);
-        employees[4] = new Employee("Fam 5", "Name5", "SName5", 3, 115700f);
-        employees[5] = new Employee("Fam 6", "Name6", "SName6", 3, 125000f);
-        employees[6] = new Employee("Fam 7", "Name7", "SName7", 4, 256000f);
-        employees[7] = new Employee("Fam 8", "Name8", "SName8", 5, 178000f);
-        employees[9] = new Employee("Fam 10", "Name10", "SName10", 5, 96800f);
+        Hufflepuff[] hufflepuff = new Hufflepuff[3];
+        hufflepuff[0] = new Hufflepuff("Zachariah Smith", "Slytherin", "15", "8", "3", "6", "8");
+        hufflepuff[1] = new Hufflepuff("Cedric Diggory", "Slytherin", "13", "5", "8", "4", "7");
+        hufflepuff[2] = new Hufflepuff("Justin Finch-Fletchley", "Slytherin", "10", "4", "7", "1", "6");
+    }
+
+    public static void main(String[] args) {
+        Ravenclaw[] ravenclaw = new Ravenclaw[3];
+        ravenclaw[0] = new Ravenclaw("Zhou Chang", "ravenclaw", "11", "6", "8", "12", "6");
+        ravenclaw[1] = new Ravenclaw("Padma Patil", "ravenclaw", "13", "7", "9", "11", "5");
+        ravenclaw[2] = new Ravenclaw("Marcus Belby", "ravenclaw", "14", "8", "10", "10", "4");
+    }
 
         printAllEmployee();
         System.out.println("sum salary of an employee:" + getAndCalculateSalarySum() + "rub.");
@@ -23,8 +50,8 @@ public class Main {
     }
 
     public static void printAllEmployee() {
-        for (Employee employee : employees) {
-            System.out.println(employee);
+        for (Hogwarts hogwarts : hogwarts) {
+            System.out.println(hogwarts);
         }
     }
 
